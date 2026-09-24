@@ -5885,3 +5885,74 @@ def verify_haccp_critical_control_point(process_type: str, target_temperature_c:
         return f"Error verifying HACCP critical control point: {e}"
 
 
+def query_culinary_knowledge_graph(entity_id: str) -> str:
+    """Queries 1-hop subgraph node and relationship entities from the unified Culinary Knowledge Graph."""
+    try:
+        from app.graph import CulinaryKnowledgeGraph
+        from app.schemas import ToolResult
+        kg = CulinaryKnowledgeGraph()
+        res = kg.query_subgraph(entity_id)
+        tool_res = ToolResult(
+            status="success",
+            tool="query_culinary_knowledge_graph",
+            result=res
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error querying culinary knowledge graph: {e}"
+
+
+def query_usda_micronutrients(query: str) -> str:
+    """Queries live USDA FoodData Central API for real-time ingredient micronutrient values."""
+    try:
+        from app.external import USDAFoodDataClient
+        from app.schemas import ToolResult
+        res = USDAFoodDataClient.search_food_nutrients(query)
+        tool_res = ToolResult(
+            status="success",
+            tool="query_usda_micronutrients",
+            result=res
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error querying USDA micronutrients: {e}"
+
+
+def search_nearby_culinary_groceries(query: str, location: str = "San Francisco, CA") -> str:
+    """Discovers nearby specialty markets and ingredient providers using Google Places geospatial client."""
+    try:
+        from app.external import GooglePlacesClient
+        from app.schemas import ToolResult
+        res = GooglePlacesClient.search_nearby_markets(query, location)
+        tool_res = ToolResult(
+            status="success",
+            tool="search_nearby_culinary_groceries",
+            result=res
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error searching nearby culinary groceries: {e}"
+
+
+def route_a2a_domain_request(domain: str, action: str, payload_summary: str = "{}") -> str:
+    """Dispatches request frame via Agent-to-Agent (A2A) protocol to specialized domain sub-agents."""
+    try:
+        import json
+        from app.a2a import A2ADomainRouter
+        from app.schemas import ToolResult
+        try:
+            payload = json.loads(payload_summary)
+        except Exception:
+            payload = {"query": payload_summary}
+        res = A2ADomainRouter.route_request(domain, action, payload)
+        tool_res = ToolResult(
+            status="success",
+            tool="route_a2a_domain_request",
+            result=res
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error routing A2A domain request: {e}"
+
+
+
