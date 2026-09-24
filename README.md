@@ -1,8 +1,8 @@
-# 👨‍🍳 Chef Gemini — AI Culinary Concierge
+# 👨‍🍳 Chef Gemini Studio — AI Culinary Concierge & Future Food Science Platform
 
 ![Chef Gemini Demo](./demo.gif)
 
-**Chef Gemini** is an advanced AI culinary concierge built with the **Google Agent Development Kit (ADK)**. It combines deep food science, recipe generation, pantry inventory management, clinical nutrition math, global heritage cuisine expertise, and **200+ specialized domain tools** with rich visual card rendering and long-term user memory.
+**Chef Gemini Studio** is an advanced AI culinary concierge built with the **Google Agent Development Kit (ADK)**. It combines deep food science, 3D food printing rheology, acoustic levitation drying, mycelium bio-scaffolds, clinical nutrition, global heritage cuisine expertise, and **222 specialized domain tools** with real-time SVG visual radar analytics and cross-session user memory.
 
 ---
 
@@ -20,20 +20,18 @@ Chef Gemini integrates directly with the following Google Cloud and Vertex AI se
 
 ---
 
-## 🛠️ 200+ Specialized Culinary Domain Tools
+## 🛠️ 222 Specialized Culinary Domain Tools
 
-Chef Gemini features **200+ dedicated ADK tools** organized into 10 specialized culinary domains:
+Chef Gemini features **222 dedicated ADK tools** organized into specialized culinary domains:
 
-1. **Molecular Gastronomy & Flavor Physics** (Tools 101–110): Direct/reverse spherification bath timing, Transglutaminase protein binding, vacuum chamber compression ($<50\,\text{mbar}$), ultrasonic cavitation ($20\,\text{kHz}$), supercritical $\text{CO}_2$ fluid extraction, bromelain/papain protease digestion, cryogenic liquid nitrogen shatter, hydrocolloid syneresis prevention, GC-MS aroma pairing, and centrifugal clarification ($10,000\times g$).
-2. **Modernist Bread, Pastry & Polymer Science** (Tools 111–120): Baker's math hydration ($55-90\%$), croissant butter block lamination rheology, Lievito Madre sourdough acid balance (lactic:acetic 3:1), macaronage lava-ribbon flow, Isomalt sugar glass transition ($160^\circ\text{C}$), Gelatin Bloom conversion ($g_2 = g_1 \times \sqrt{B_1 / B_2}$), panada egg hydration absorption, chocolate $\beta_V$ crystal seeding, fat crystallization polymorphs, and ovalbumin foam stabilization.
-3. **Artisan Fermentation, Koji & Fungi** (Tools 121–130): *Aspergillus oryzae* koji spore inoculation, thermal enzyme garum proteolysis ($60^\circ\text{C}$), miso salt concentration ($5-14\%$), tsukemono nuka bran bed maintenance, black garlic Maillard chamber ($65^\circ\text{C}$, $85\%\,\text{RH}$), Acetobacter vinegar oxidation, Rhizopus oligosporus tempeh incubation, kombucha SCOBY balancing, lacto-ferment brine math, and wild mushroom foraging safety.
-4. **Enology, Spirits & Craft Beverages** (Tools 131–140): Growing Degree Days (GDD) terroir scoring, Champagne *Méthode Traditionnelle* dosage ($24\,\text{g/L} \rightarrow 6\,\text{bar}$), craft cider tannin-acid balance, bourbon oak barrel char extraction, beer hop IBU utilization ($IBU = \frac{g \times \%_\alpha \times U}{V}$), cocktail thermal dilution, absinthe thujone louche effect, vermouth botanical steeping, Henry's Law $\text{CO}_2$ carbonation, and pot still distillation cuts.
-5. **Regional Heritage Cuisines** (Tools 141–150): Mexican corn nixtamalization ($\text{Ca(OH)}_2$), Indian tadka fat-soluble spice blooming order, Thai curry paste mortar fiber shear, Ethiopian *ersho* teff sourdough fermentation, semolina bronze die extrusion friction, Spanish paella socarrat bottom flame control, Middle Eastern tahini halva crystallization, Japanese ramen *tare/dashi* umami synergy, Escoffier mother sauce roux reduction, and Georgian khachapuri sulguni stretchability.
-6. **Clinical & Performance Nutrition** (Tools 151–160): Ketogenic net carb macro ratios (3:1/4:1), Low-FODMAP fermentable carbohydrate scanning, renal potassium & phosphorus leaching, Glycemic Index/Load response curves, endurance athlete glycogen carb loading ($7-10\,\text{g/kg}$), anti-inflammatory polyphenol density, biogenic amine histamine safety, muscle hypertrophy leucine trigger ($3.0\,\text{g}$), diabetic carb exchange ICR units, and IDDSI texture-modified diet standards.
-7. **Butchery, Seafood & Upcycling** (Tools 161–170): Sashimi-grade Ikejime ATP preservation, beef dry-aging calpain/cathepsin tenderization, whole animal nose-to-tail yield, citrus peel *oleo saccharum* cold sugar extraction, Monterey Bay Seafood Watch rating, brewery spent grain upcycled flour milling, cascara coffee cherry tisane brewing, cricket flour protein incorporation, cell-cultivated meat scaffold searing, and food waste methane offset calculator.
-8. **Advanced Thermal Transport & Rheology** (Tools 171–180): Fourier's law thermal diffusivity, Stokes' law emulsion creaming velocity, starch gelatinization pasting temperatures, caramelization sucrose pyrolysis curves, Maillard reaction kinetics vs pH, sous-vide thermal pasteurization ($D$/$Z$-values), deep-frying oil TPM degradation, bread staling retrogradation, ice cream freezing point depression, and non-Newtonian yield stress.
-9. **Sensory Science & Gastronomic Pairing** (Tools 181–190): Volatile aromatic molecule pairing, monosodium glutamate & disodium inosinate exponential umami multiplier, triangle test sensory difference thresholds, wine & cheese tannin-fat matching, coffee extraction yield TDS brewing charts, tea catechin steep timers, sodium ion bitterness masking, Scoville capsaicin cooling, astringency salivary protein precipitation, and kokumi $\gamma$-glutamyl peptide richness boosters.
-10. **Smart Kitchen Automation & Operations** (Tools 191–200): Non-linear recipe batch volume/surface scaling, commercial kitchen prep par levels, food cost & gross contribution margin solver, HACCP critical control point temperature monitoring, Arrhenius accelerated shelf-life modeling, cold chain refrigeration failure evaluation, recipe carbon footprint ($CO_2e$), virtual water footprint scanning, menu engineering matrix (Star, Plowhorse, Puzzle, Dog), and Big-9 allergen cross-contamination auditing.
+1. **Molecular Gastronomy & Flavor Physics**: Direct/reverse spherification bath timing, Transglutaminase protein binding, vacuum chamber compression ($<50\,\text{mbar}$), ultrasonic cavitation ($20\,\text{kHz}$), supercritical $\text{CO}_2$ fluid extraction, plant protease digestion, LN2 shatter, hydrocolloid syneresis, GC-MS aroma pairing, and $10,000\times g$ centrifugal clarification.
+2. **Modernist Bread, Pastry & Polymer Science**: Baker's math hydration ($55-90\%$), croissant butter block lamination rheology, Lievito Madre sourdough acid balance (lactic:acetic 3:1), macaronage lava-ribbon flow, Isomalt sugar glass transition ($160^\circ\text{C}$), Gelatin Bloom conversion ($g_2 = g_1 \times \sqrt{B_1 / B_2}$), panada egg hydration, chocolate $\beta_V$ crystal seeding, fat crystallization polymorphs, and ovalbumin foam stabilization.
+3. **Artisan Fermentation, Koji & Fungi**: *Aspergillus oryzae* koji spore inoculation, thermal enzyme garum proteolysis ($60^\circ\text{C}$), miso salt concentration ($5-14\%$), tsukemono nuka bran bed maintenance, black garlic Maillard chamber ($65^\circ\text{C}$, $85\%\,\text{RH}$), Acetobacter vinegar oxidation, Rhizopus oligosporus tempeh incubation, kombucha SCOBY balancing, lacto-ferment brine math, and wild mushroom foraging safety.
+4. **Enology, Spirits & Craft Beverages**: Growing Degree Days (GDD) terroir scoring, Champagne *Méthode Traditionnelle* dosage ($24\,\text{g/L} \rightarrow 6\,\text{bar}$), craft cider tannin-acid balance, bourbon oak barrel char extraction, beer hop IBU utilization ($IBU = \frac{g \times \%_\alpha \times U}{V}$), cocktail thermal dilution, absinthe thujone louche effect, vermouth botanical steeping, Henry's Law $\text{CO}_2$ carbonation, and pot still distillation cuts.
+5. **Regional Heritage Cuisines**: Mexican corn nixtamalization ($\text{Ca(OH)}_2$), Indian tadka fat-soluble spice blooming order, Thai curry paste mortar fiber shear, Ethiopian *ersho* teff sourdough fermentation, semolina bronze die extrusion friction, Spanish paella socarrat bottom flame control, Middle Eastern tahini halva crystallization, Japanese ramen *tare/dashi* umami synergy, Escoffier mother sauce roux reduction, and Georgian khachapuri sulguni stretchability.
+6. **Clinical & Performance Nutrition**: Ketogenic net carb macro ratios (3:1/4:1), Low-FODMAP fermentable carbohydrate scanning, renal potassium & phosphorus leaching, Glycemic Index/Load response curves, endurance athlete glycogen carb loading ($7-10\,\text{g/kg}$), anti-inflammatory polyphenol density, biogenic amine histamine safety, muscle hypertrophy leucine trigger ($3.0\,\text{g}$), diabetic carb exchange ICR units, and IDDSI texture-modified diet standards.
+7. **Butchery, Seafood & Upcycling**: Sashimi-grade Ikejime ATP preservation, beef dry-aging calpain/cathepsin tenderization, whole animal nose-to-tail yield, citrus peel *oleo saccharum* cold sugar extraction, Monterey Bay Seafood Watch rating, brewery spent grain upcycled flour milling, cascara coffee cherry tisane brewing, cricket flour protein incorporation, cell-cultivated meat scaffold searing, and food waste methane offset calculator.
+8. **Future Food Science & 3D Gastronomy**: 3D food printing extrusion shear rate, acoustic levitation contactless dehydration, mycelium bio-scaffold fermentation, Pulsed Electric Field (PEF) cell electroporation, sonic acoustic spirits aging, smart sous-vide core probe thermodynamics, bio-fermented ester synthesis, non-contact laser surface caramelization, cold atmospheric plasma sanitization, and High-Pressure Processing (HPP) non-thermal pasteurization.
 
 ---
 
@@ -43,14 +41,15 @@ Chef Gemini features **200+ dedicated ADK tools** organized into 10 specialized 
 chef-gemini/
 ├── app/                       # Core ADK Agent implementation
 │   ├── agent.py               # Agent definition, A2UI callbacks, & tool registration
-│   ├── tools.py               # 200+ specialized culinary domain tools & Imagen 3 card generator
+│   ├── tools.py               # 222 specialized culinary domain tools & Imagen 3 card generator
 │   └── a2ui_utils.py          # A2UI schema manager & surface update builder
 ├── frontend/                  # FastAPI Proxy & Modern Web UI
 │   ├── main.py                # FastAPI server communicating via A2A protocol
-│   └── static/                # HTML5/CSS3 frontend with A2UI mini-renderer
+│   └── static/                # Glassmorphic UI with SVG Radar Chart & Clinical Gauges
 ├── scratch/                   # Unit test suites & validation scripts
 │   ├── test_batch_8.py        # Unit tests for Tools 31-100
-│   └── test_batch_9.py        # Unit tests for Tools 101-200
+│   ├── test_batch_9.py        # Unit tests for Tools 101-200
+│   └── test_upscale.py        # Unit tests for Upscaled Platform & 222 Tools
 ├── agents-cli-manifest.yaml   # Manifest for agents-cli deployment & runtime
 └── demo.gif                   # Embedded looping demo recording
 ```
@@ -82,9 +81,9 @@ export GOOGLE_MAPS_API_KEY="<your-google-maps-api-key>"
    agents-cli install
    ```
 
-2. Run unit tests across all 200+ tools:
+2. Run unit tests across all 222 tools:
    ```bash
-   uv run pytest scratch/test_batch_9.py
+   uv run pytest scratch/test_upscale.py
    ```
 
 3. Launch the ADK local playground:
@@ -92,7 +91,7 @@ export GOOGLE_MAPS_API_KEY="<your-google-maps-api-key>"
    agents-cli playground
    ```
 
-### Running the Web UI & FastAPI Proxy
+### Running the Web UI Studio
 
 Start the frontend proxy server:
 

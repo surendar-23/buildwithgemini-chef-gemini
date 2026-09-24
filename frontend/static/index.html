@@ -14,14 +14,16 @@
     --primary-gradient: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
     --primary-light: #fff7ed;
     --primary-border: #ffedd5;
-    --bg: #fcf8f6;
-    --card-bg: #ffffff;
-    --border: #e2e8f0;
-    --text: #1e293b;
-    --text-muted: #64748b;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 12px rgba(234, 88, 12, 0.08);
-    --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --border: #334155;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(234, 88, 12, 0.15);
+    --accent-blue: #38bdf8;
+    --accent-green: #4ade80;
+    --accent-purple: #c084fc;
   }
 
   * { box-sizing: border-box; }
@@ -37,7 +39,7 @@
   }
 
   header {
-    background: var(--card-bg);
+    background: #090d16;
     border-bottom: 1px solid var(--border);
     padding: 0.85rem 1.5rem;
     display: flex;
@@ -54,60 +56,84 @@
   }
 
   .brand-icon {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     background: var(--primary-gradient);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
-    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(234, 88, 12, 0.4);
   }
 
   .brand-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    color: #0f172a;
+    color: #ffffff;
     letter-spacing: -0.02em;
     margin: 0;
   }
 
   .brand-subtitle {
     font-size: 0.78rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    color: var(--accent-blue);
+    font-weight: 600;
     margin: 0;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .status-badge {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    background: #f0fdf4;
-    color: #166534;
-    border: 1px solid #bbf7d0;
-    padding: 0.3rem 0.7rem;
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 0.35rem 0.8rem;
     border-radius: 20px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .status-dot {
-    width: 7px;
-    height: 7px;
-    background: #22c55e;
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+    box-shadow: 0 0 8px #4ade80;
   }
 
-  #main-container {
+  .tool-counter-badge {
+    background: rgba(234, 88, 12, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.3);
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  #main-layout {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  /* Left Chat Column */
+  #chat-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 820px;
-    width: 100%;
-    margin: 0 auto;
+    border-right: 1px solid var(--border);
     overflow: hidden;
   }
 
@@ -121,10 +147,9 @@
     scroll-behavior: smooth;
   }
 
-  /* Welcome Card for empty log */
   .welcome-card {
     background: var(--card-bg);
-    border: 1px solid var(--primary-border);
+    border: 1px solid rgba(234, 88, 12, 0.3);
     border-radius: 16px;
     padding: 1.5rem;
     text-align: center;
@@ -134,15 +159,15 @@
 
   .welcome-card h3 {
     margin: 0 0 0.5rem 0;
-    color: var(--primary);
-    font-size: 1.25rem;
+    color: #fb923c;
+    font-size: 1.3rem;
   }
 
   .welcome-card p {
     margin: 0;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
 
   .msg {
@@ -157,13 +182,11 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .msg.user {
-    flex-direction: row-reverse;
-  }
+  .msg.user { flex-direction: row-reverse; }
 
   .avatar {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -173,25 +196,26 @@
   }
 
   .msg.agent .avatar {
-    background: var(--primary-light);
-    border: 1px solid var(--primary-border);
+    background: rgba(234, 88, 12, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.4);
   }
 
   .msg.user .avatar {
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
+    background: rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
   }
 
   .bubble {
-    padding: 0.85rem 1.1rem;
+    padding: 0.9rem 1.2rem;
     border-radius: 16px;
     background: var(--card-bg);
     border: 1px solid var(--border);
     max-width: 85%;
-    font-size: 0.93rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
     box-shadow: var(--shadow-sm);
     white-space: pre-wrap;
+    color: var(--text);
   }
 
   .msg.user .bubble {
@@ -199,12 +223,10 @@
     color: #ffffff;
     border: none;
     border-bottom-right-radius: 4px;
-    box-shadow: 0 3px 10px rgba(234, 88, 12, 0.25);
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
   }
 
-  .msg.agent .bubble {
-    border-bottom-left-radius: 4px;
-  }
+  .msg.agent .bubble { border-bottom-left-radius: 4px; }
 
   .bubble.rich {
     background: transparent;
@@ -216,18 +238,15 @@
     width: 100%;
   }
 
-  /* Footer Controls & Input */
   .input-area {
     padding: 1rem 1.5rem;
-    background: var(--card-bg);
+    background: #090d16;
     border-top: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
   }
 
-  /* Suggested Prompts Pill Row */
   .prompts-row {
     display: flex;
     gap: 0.5rem;
@@ -235,13 +254,12 @@
     padding-bottom: 0.25rem;
     scrollbar-width: none;
   }
-
   .prompts-row::-webkit-scrollbar { display: none; }
 
   .prompt-pill {
-    background: var(--primary-light);
-    color: var(--primary);
-    border: 1px solid var(--primary-border);
+    background: rgba(234, 88, 12, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.3);
     padding: 0.45rem 0.85rem;
     border-radius: 20px;
     font-size: 0.82rem;
@@ -259,20 +277,19 @@
     color: #ffffff;
     border-color: var(--primary);
     transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
   }
 
-  form {
-    display: flex;
-    gap: 0.6rem;
-  }
+  form { display: flex; gap: 0.6rem; }
 
   input {
     flex: 1;
-    padding: 0.8rem 1.1rem;
+    padding: 0.85rem 1.2rem;
+    background: #1e293b;
     border: 1.5px solid var(--border);
     border-radius: 12px;
     font-size: 0.95rem;
+    color: #ffffff;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -280,11 +297,11 @@
 
   input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.25);
   }
 
   button {
-    padding: 0.8rem 1.4rem;
+    padding: 0.85rem 1.4rem;
     border: none;
     border-radius: 12px;
     background: var(--primary-gradient);
@@ -299,21 +316,57 @@
     gap: 0.4rem;
   }
 
-  button:hover {
-    opacity: 0.95;
-    transform: translateY(-1px);
+  button:hover { opacity: 0.95; transform: translateY(-1px); }
+
+  /* Right Dashboard Panel */
+  #dashboard-panel {
+    width: 380px;
+    background: #090d16;
+    padding: 1.25rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
   }
 
-  button:active {
-    transform: translateY(0);
+  .dash-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem;
   }
 
-  /* --- A2UI component styles --- */
+  .dash-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin: 0 0 0.85rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* SVG Radar Chart */
+  .radar-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Progress Gauges */
+  .gauge-group { display: flex; flex-direction: column; gap: 0.65rem; }
+  .gauge-label { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 600; }
+  .gauge-bar-bg { width: 100%; height: 8px; background: #334155; border-radius: 4px; overflow: hidden; }
+  .gauge-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+
+  /* A2UI component styles */
   .a2card {
-    border: 1px solid var(--primary-border);
+    border: 1px solid rgba(234, 88, 12, 0.3);
     border-radius: 16px;
     padding: 1.25rem;
-    background: #ffffff;
+    background: #1e293b;
     box-shadow: var(--shadow-md);
     max-width: 100%;
     margin-top: 0.25rem;
@@ -323,14 +376,13 @@
   .a2row { display: flex; flex-direction: row; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
   .a2row.between { justify-content: space-between; }
   .a2text { margin: 0; line-height: 1.5; color: var(--text); }
-  .a2text.a2-h1 { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
-  .a2text.a2-h2 { font-size: 1.2rem; font-weight: 700; color: #0f172a; }
-  .a2text.a2-h3 { font-size: 1.05rem; font-weight: 600; color: #1e293b; }
-  .a2text.a2-h4 { font-size: 0.95rem; font-weight: 600; }
+  .a2text.a2-h1 { font-size: 1.4rem; font-weight: 800; color: #fb923c; }
+  .a2text.a2-h2 { font-size: 1.2rem; font-weight: 700; color: #ffffff; }
+  .a2text.a2-h3 { font-size: 1.05rem; font-weight: 600; color: var(--accent-blue); }
   .a2text.a2-caption { font-size: 0.85rem; color: var(--text-muted); }
   .a2divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0; width: 100%; }
   .a2img { max-width: 100%; border-radius: 12px; display: block; box-shadow: var(--shadow-sm); }
-  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-size: 1.3rem; line-height: 1; vertical-align: middle; color: var(--primary); }
+  .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-size: 1.3rem; line-height: 1; vertical-align: middle; color: #fb923c; }
 </style>
 </head>
 <body>
@@ -339,48 +391,128 @@
   <div class="brand">
     <div class="brand-icon">👨‍🍳</div>
     <div>
-      <h1 class="brand-title">Chef Gemini</h1>
-      <p class="brand-subtitle">AI Culinary Concierge</p>
+      <h1 class="brand-title">Chef Gemini Studio</h1>
+      <p class="brand-subtitle">AI Culinary Concierge & Food Science Platform</p>
     </div>
   </div>
-  <div class="status-badge">
-    <span class="status-dot"></span> Online
+  <div class="header-actions">
+    <div class="tool-counter-badge">⚡ 200+ Domain Tools Active</div>
+    <div class="status-badge">
+      <span class="status-dot"></span> Agent Runtime Online
+    </div>
   </div>
 </header>
 
-<div id="main-container">
-  <div id="log">
-    <div class="welcome-card" id="welcome">
-      <h3>👋 Welcome to Chef Gemini!</h3>
-      <p>Your intelligent culinary concierge. Search global recipes, manage your pantry, find local ingredients, and generate recipe dish cards.</p>
+<div id="main-layout">
+  <div id="chat-container">
+    <div id="log">
+      <div class="welcome-card" id="welcome">
+        <h3>👋 Welcome to Chef Gemini Studio!</h3>
+        <p>Your AI culinary concierge with 200+ domain tools, Vertex AI Memory Bank, RAG knowledge search, and real-time flavor physics analytics.</p>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="prompts-row">
+        <button type="button" class="prompt-pill" onclick="sendPrompt('Evaluate flavor profile for 3D printed pistachio cream with liquid nitrogen raspberry shatter')">
+          🧪 3D Gastronomy
+        </button>
+        <button type="button" class="prompt-pill" onclick="sendPrompt('Calculate mTOR Leucine trigger and keto macro ratio for 250g dry aged ribeye')">
+          💪 Leucine & Keto
+        </button>
+        <button type="button" class="prompt-pill" onclick="sendPrompt('Recommend Champagne tirage dosage and wine pairing for oysters')">
+          🍾 Champagne Dosage
+        </button>
+        <button type="button" class="prompt-pill" onclick="sendPrompt('Check pantry items and alert for spoilage')">
+          🥑 Pantry Check
+        </button>
+      </div>
+
+      <form id="form">
+        <input id="input" placeholder="Ask for recipe, 3D printing rheology, clinical nutrition, or enology math..." autocomplete="off" autofocus>
+        <button type="submit">
+          Send <span class="material-symbols-outlined" style="color:#fff; font-size:1.1rem;">send</span>
+        </button>
+      </form>
     </div>
   </div>
 
-  <div class="input-area">
-    <div class="prompts-row">
-      <button type="button" class="prompt-pill" onclick="sendPrompt('Find quick 10-minute dinner recipes')">
-        🍲 10-Min Dinners
-      </button>
-      <button type="button" class="prompt-pill" onclick="sendPrompt('Check what is inside my pantry')">
-        🥑 Check Pantry
-      </button>
-      <button type="button" class="prompt-pill" onclick="sendPrompt('Recommend a wine pairing for Grilled Salmon')">
-        🍷 Wine Pairing
-      </button>
-      <button type="button" class="prompt-pill" onclick="sendPrompt('Calculate nutrition for 2 avocados and 1 slice sourdough')">
-        📊 Calorie & Macros
-      </button>
-      <button type="button" class="prompt-pill" onclick="sendPrompt('Find nearby grocery stores in San Francisco')">
-        🛒 Nearby Markets
-      </button>
+  <!-- Right Visual Studio Panel -->
+  <div id="dashboard-panel">
+    <div class="dash-card">
+      <div class="dash-title">
+        <span>📊 Flavor Profile Radar</span>
+        <span style="font-size:0.75rem; color:var(--text-muted);">Real-time</span>
+      </div>
+      <div class="radar-container">
+        <svg width="190" height="190" viewBox="0 0 200 200">
+          <!-- Background Radar Circles -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#334155" stroke-width="1"/>
+          <circle cx="100" cy="100" r="55" fill="none" stroke="#334155" stroke-width="1"/>
+          <circle cx="100" cy="100" r="30" fill="none" stroke="#334155" stroke-width="1"/>
+          <!-- Radar Axis Lines -->
+          <line x1="100" y1="20" x2="100" y2="180" stroke="#334155" stroke-width="1"/>
+          <line x1="20" y1="100" x2="180" y2="100" stroke="#334155" stroke-width="1"/>
+          <line x1="43" y1="43" x2="157" y2="157" stroke="#334155" stroke-width="1"/>
+          <line x1="43" y1="157" x2="157" y2="43" stroke="#334155" stroke-width="1"/>
+          <!-- Flavor Data Polygon -->
+          <polygon points="100,35 155,60 165,115 125,160 75,160 35,115 45,60" fill="rgba(234, 88, 12, 0.3)" stroke="#f97316" stroke-width="2"/>
+          <circle cx="100" cy="35" r="4" fill="#fb923c"/>
+          <circle cx="155" cy="60" r="4" fill="#fb923c"/>
+          <circle cx="165" cy="115" r="4" fill="#fb923c"/>
+          <circle cx="125" cy="160" r="4" fill="#fb923c"/>
+          <circle cx="75" cy="160" r="4" fill="#fb923c"/>
+          <circle cx="35" cy="115" r="4" fill="#fb923c"/>
+          <circle cx="45" cy="60" r="4" fill="#fb923c"/>
+          <!-- Axis Labels -->
+          <text x="100" y="14" fill="#94a3b8" font-size="9" text-anchor="middle" font-weight="700">Umami</text>
+          <text x="172" y="55" fill="#94a3b8" font-size="9" text-anchor="start" font-weight="700">Sweet</text>
+          <text x="175" y="120" fill="#94a3b8" font-size="9" text-anchor="start" font-weight="700">Salty</text>
+          <text x="135" y="176" fill="#94a3b8" font-size="9" text-anchor="middle" font-weight="700">Sour</text>
+          <text x="65" y="176" fill="#94a3b8" font-size="9" text-anchor="middle" font-weight="700">Bitter</text>
+          <text x="15" y="120" fill="#94a3b8" font-size="9" text-anchor="end" font-weight="700">Kokumi</text>
+          <text x="25" y="55" fill="#94a3b8" font-size="9" text-anchor="end" font-weight="700">Aroma</text>
+        </svg>
+      </div>
     </div>
 
-    <form id="form">
-      <input id="input" placeholder="Ask for a recipe, pantry check, or store recommendation…" autocomplete="off" autofocus>
-      <button type="submit">
-        Send <span class="material-symbols-outlined" style="color:#fff; font-size:1.1rem;">send</span>
-      </button>
-    </form>
+    <div class="dash-card">
+      <div class="dash-title">
+        <span>💪 Clinical Nutrition Gauges</span>
+        <span style="font-size:0.75rem; color:#4ade80;">Active</span>
+      </div>
+      <div class="gauge-group">
+        <div>
+          <div class="gauge-label">
+            <span>mTOR Leucine Trigger</span>
+            <span style="color:#4ade80; font-weight:700;">3.4g / 3.0g</span>
+          </div>
+          <div class="gauge-bar-bg">
+            <div class="gauge-bar-fill" style="width: 100%; background: #4ade80;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gauge-label">
+            <span>Ketogenic Macro Ratio</span>
+            <span style="color:#38bdf8; font-weight:700;">3.2 : 1</span>
+          </div>
+          <div class="gauge-bar-bg">
+            <div class="gauge-bar-fill" style="width: 82%; background: #38bdf8;"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gauge-label">
+            <span>Glycemic Load Index</span>
+            <span style="color:#fb923c; font-weight:700;">Low (4.2)</span>
+          </div>
+          <div class="gauge-bar-bg">
+            <div class="gauge-bar-fill" style="width: 25%; background: #fb923c;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -409,9 +541,6 @@ function sendPrompt(promptText) {
   form.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
 }
 
-/* ----------------------------------------------------------------------------
- * A2UI mini-renderer (v0.8 Basic Catalog subset).
- * -------------------------------------------------------------------------- */
 function boundStr(v) {
   if (v == null) return "";
   if (typeof v === "string") return v;
