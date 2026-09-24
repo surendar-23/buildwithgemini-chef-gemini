@@ -4509,7 +4509,7 @@ def gelatin_bloom_conversion_matrix(mass_g: float, bloom_from: float = 200.0, bl
             f"🍮 **Gelatin Bloom Strength Converter**:\n\n"
             f"- **Starting Gelatin**: {mass_g:.2f} g @ {bloom_from:.0f} Bloom\n"
             f"- **Target Gelatin**: **{needed_g:.2f} g** @ {bloom_to:.0f} Bloom\n"
-            f"- **Formula**: $g_2 = g_1 \times \sqrt{{\frac{{B_1}}{{B_2}}}}\n"
+            f"- **Formula**: $g_2 = g_1 \times \\sqrt{{\\frac{{B_1}}{{B_2}}}}\n"
             f"- **Hydration Water Ratio**: Bloom in 5x cold water by mass for 10 mins."
         )
     except Exception as e:
@@ -4786,7 +4786,7 @@ def soda_carbonation_volume_pressure(volume_co2: float = 3.5, temp_c: float = 4.
             f"🥤 **Henry's Law Soda Carbonation Equilibrium**:\n\n"
             f"- **Target Carbonation**: {volume_co2:.1f} Volumes CO2 @ {temp_c:.1f}°C\n"
             f"- **Required Headspace Regulator Pressure**: **{psi_needed:.1f} PSI**\n"
-            f"- **Henry's Law Equilibrium**: $C = k \cdot P_{{CO_2}}$"
+            f"- **Henry's Law Equilibrium**: $C = k \\cdot P_{{CO_2}}$"
         )
     except Exception as e:
         return f"Error in soda carbonation calc: {e}"
