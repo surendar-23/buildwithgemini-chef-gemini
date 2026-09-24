@@ -1,0 +1,18 @@
+{
+  "inventory": {
+    "total_ast_functions": 225,
+    "public_functions": 224,
+    "unique_public_functions": 222,
+    "duplicate_names": [
+      "soda_carbonation_volume_pressure",
+      "choux_pastry_egg_absorption_index"
+    ],
+    "registered_root_agent_tools": 223
+  },
+  "performance": {
+    "startup_time_ms": 0.0,
+    "total_docstring_bytes": 65355,
+    "estimated_tool_tokens": 16338
+  },
+  "timestamp": "2026-09-24T09:46:11Z"
+}
