@@ -67,10 +67,20 @@ def test_mega_tech_500_ideas():
     assert res491["cumulative_protein_produced_kg"] == 2500.0
 
 
-def test_registry_auto_discovery_500():
+def test_hyper_tech_1000_ideas():
+    from app.hyper_tech import SovereignBioEconomyEngine, DeepSpaceAstroEngine
+    res1000 = SovereignBioEconomyEngine.sovereign_global_food_intelligence_layer(1000)
+    assert res1000["global_culinary_coverage_pct"] == 100.0
+
+    res633 = DeepSpaceAstroEngine.martian_co2_autotrophic_protein(10.0, 100.0)
+    assert res633["protein_yield_g_hr"] > 0.0
+
+
+def test_registry_auto_discovery_1000():
     ToolRegistry.auto_discover()
-    assert len(ToolRegistry._registry) >= 250, f"Expected >= 250 registered tools, got {len(ToolRegistry._registry)}"
+    assert len(ToolRegistry._registry) >= 260, f"Expected >= 260 registered tools, got {len(ToolRegistry._registry)}"
 
 
 if __name__ == "__main__":
     pytest.main(["-v", __file__])
+

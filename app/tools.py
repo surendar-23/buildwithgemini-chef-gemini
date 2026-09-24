@@ -6498,6 +6498,104 @@ def sovereign_container_biofoundry_eval(container_count: int, runtime_days: floa
         return ToolResult(status="success", tool="sovereign_container_biofoundry_eval", result=MegaTechEngine.sovereign_container_biofoundry(container_count, runtime_days)).format_output()
     except Exception as e: return f"Error in sovereign_container_biofoundry_eval: {e}"
 
+# --- IDEAS 501-1000: HYPER TECH, ASTRO-GASTRONOMY & SOVEREIGN BIO-ECONOMY ---
+def iets_scent_vibrational_tunneling_eval(energy_ev: float, dipole_moment_debye: float) -> str:
+    """501/602. Sub-Atomic Inelastic Electron Tunneling Scent Simulator."""
+    try:
+        from app.hyper_tech import HyperQuantumEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="iets_scent_vibrational_tunneling_eval", result=HyperQuantumEngine.iets_scent_vibrational_tunneling(energy_ev, dipole_moment_debye)).format_output()
+    except Exception as e: return f"Error in iets_scent_vibrational_tunneling_eval: {e}"
+
+def mof_aroma_encapsulation_eval(pore_diameter_angstrom: float, volatile_mw: float) -> str:
+    """503/604. Supramolecular Metal-Organic Framework (MOF) Aroma Traps."""
+    try:
+        from app.hyper_tech import HyperQuantumEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="mof_aroma_encapsulation_eval", result=HyperQuantumEngine.mof_aroma_encapsulation(pore_diameter_angstrom, volatile_mw)).format_output()
+    except Exception as e: return f"Error in mof_aroma_encapsulation_eval: {e}"
+
+def optogenetic_yeast_ester_pulse_eval(light_wavelength_nm: float, pulse_duration_ms: float) -> str:
+    """511/612. Optogenetic Light-Switchable Yeast Ester Fermentation."""
+    try:
+        from app.hyper_tech import SyntheticBioEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="optogenetic_yeast_ester_pulse_eval", result=SyntheticBioEngine.optogenetic_yeast_ester_pulse(light_wavelength_nm, pulse_duration_ms)).format_output()
+    except Exception as e: return f"Error in optogenetic_yeast_ester_pulse_eval: {e}"
+
+def crispr_pathogen_lateral_flow_eval(viral_load_copies: float) -> str:
+    """513/614. CRISPR-Cas12 Rapid Food Pathogen Biosensor."""
+    try:
+        from app.hyper_tech import SyntheticBioEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="crispr_pathogen_lateral_flow_eval", result=SyntheticBioEngine.crispr_pathogen_lateral_flow(viral_load_copies)).format_output()
+    except Exception as e: return f"Error in crispr_pathogen_lateral_flow_eval: {e}"
+
+def martian_co2_autotrophic_protein_eval(co2_flow_L_min: float, power_watts: float) -> str:
+    """532/633. Martian Atmospheric CO2 Autotrophic Protein Engine."""
+    try:
+        from app.hyper_tech import DeepSpaceAstroEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="martian_co2_autotrophic_protein_eval", result=DeepSpaceAstroEngine.martian_co2_autotrophic_protein(co2_flow_L_min, power_watts)).format_output()
+    except Exception as e: return f"Error in martian_co2_autotrophic_protein_eval: {e}"
+
+def dna_origami_cage_release_eval(enzyme_conc_uM: float) -> str:
+    """541/642. Self-Assembled DNA Origami Nutrient Nanocarriers."""
+    try:
+        from app.hyper_tech import NanotechDeliveryEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="dna_origami_cage_release_eval", result=NanotechDeliveryEngine.dna_origami_cage_release(enzyme_conc_uM)).format_output()
+    except Exception as e: return f"Error in dna_origami_cage_release_eval: {e}"
+
+def hydrothermal_piezophilic_salt_eval(depth_meters: float) -> str:
+    """551/652. Abyssal Piezophilic Hydrothermal Vent Salt Extractor."""
+    try:
+        from app.hyper_tech import AbyssalExtremophileEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="hydrothermal_piezophilic_salt_eval", result=AbyssalExtremophileEngine.hydrothermal_piezophilic_salt(depth_meters)).format_output()
+    except Exception as e: return f"Error in hydrothermal_piezophilic_salt_eval: {e}"
+
+def direct_air_capture_amino_acid_eval(co2_captured_kg: float, energy_kwh: float) -> str:
+    """661. Direct Air Capture Carbonate-to-Amino Acid Electrolyzer."""
+    try:
+        from app.hyper_tech import CircularZeroCarbonEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="direct_air_capture_amino_acid_eval", result=CircularZeroCarbonEngine.direct_air_capture_amino_acid(co2_captured_kg, energy_kwh)).format_output()
+    except Exception as e: return f"Error in direct_air_capture_amino_acid_eval: {e}"
+
+def kitchen_swarm_fleet_coordinator_eval(active_agents: int) -> str:
+    """571/671. Autonomous 50-Agent Kitchen Swarm Fleet Coordinator."""
+    try:
+        from app.hyper_tech import SwarmRoboticsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="kitchen_swarm_fleet_coordinator_eval", result=SwarmRoboticsEngine.kitchen_swarm_fleet_coordinator(active_agents)).format_output()
+    except Exception as e: return f"Error in kitchen_swarm_fleet_coordinator_eval: {e}"
+
+def mitophagy_urolithin_induction_eval(urolithin_a_mg: float, spermidine_mg: float) -> str:
+    """583/981. Targeted Micro-Nutrient Mitophagy Induction Matrix."""
+    try:
+        from app.hyper_tech import EpigeneticLongevityEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="mitophagy_urolithin_induction_eval", result=EpigeneticLongevityEngine.mitophagy_urolithin_induction(urolithin_a_mg, spermidine_mg)).format_output()
+    except Exception as e: return f"Error in mitophagy_urolithin_induction_eval: {e}"
+
+def organ_on_chip_full_sensory_network_eval(flow_rate_ul_min: float) -> str:
+    """591/691. Full Human Sensory Pathway Organ-On-Chip Network."""
+    try:
+        from app.hyper_tech import OrganOnChipEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="organ_on_chip_full_sensory_network_eval", result=OrganOnChipEngine.organ_on_chip_full_sensory_network(flow_rate_ul_min)).format_output()
+    except Exception as e: return f"Error in organ_on_chip_full_sensory_network_eval: {e}"
+
+def sovereign_global_food_intelligence_layer_eval(engine_count: int) -> str:
+    """991/1000. Autonomous Self-Sustaining Global Food Intelligence Layer."""
+    try:
+        from app.hyper_tech import SovereignBioEconomyEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="sovereign_global_food_intelligence_layer_eval", result=SovereignBioEconomyEngine.sovereign_global_food_intelligence_layer(engine_count)).format_output()
+    except Exception as e: return f"Error in sovereign_global_food_intelligence_layer_eval: {e}"
+
+
 
 
 
