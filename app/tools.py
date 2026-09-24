@@ -5841,3 +5841,47 @@ def high_pressure_processing_hpp_protein_denaturation(pressure_mpa: float, hold_
     except Exception as e:
         return f"Error in HPP calc: {e}"
 
+
+def calculate_aroma_volatile_pairing(ingredient_a: str, ingredient_b: str) -> str:
+    """Calculates chemical volatile aroma compound synergy and pairing score between two ingredients."""
+    try:
+        from app.aroma import AromaPairingEngine
+        from app.schemas import ToolResult
+        res = AromaPairingEngine.calculate_compatibility(ingredient_a, ingredient_b)
+        tool_res = ToolResult(
+            status="success",
+            tool="calculate_aroma_volatile_pairing",
+            result=res,
+            assumptions=["Based on gas chromatography-mass spectrometry (GC-MS) volatile flavor compounds database."]
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error calculating aroma volatile pairing: {e}"
+
+
+def verify_haccp_critical_control_point(process_type: str, target_temperature_c: float, holding_time_minutes: float) -> str:
+    """Verifies HACCP Critical Control Point (CCP) safety compliance and outputs corrective action workflows."""
+    try:
+        from app.haccp import HACCPEngine
+        from app.schemas import ToolResult, SafetyWarning, ProvenanceInfo
+        res = HACCPEngine.analyze_process_hazard(process_type, target_temperature_c, holding_time_minutes)
+        warnings = []
+        if res["status"] != "COMPLIANT":
+            warnings.append(SafetyWarning(
+                category="food_safety",
+                level="critical",
+                message=res["corrective_action_workflow"],
+                regulatory_reference=res["regulatory_reference"]
+            ))
+        tool_res = ToolResult(
+            status="success" if res["status"] == "COMPLIANT" else "warning",
+            tool="verify_haccp_critical_control_point",
+            result=res,
+            warnings=warnings,
+            provenance=ProvenanceInfo(formula_id=res["regulatory_reference"])
+        )
+        return tool_res.format_output()
+    except Exception as e:
+        return f"Error verifying HACCP critical control point: {e}"
+
+
