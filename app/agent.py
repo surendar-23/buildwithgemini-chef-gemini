@@ -63,6 +63,7 @@ from google.adk.tools.preload_memory_tool import PreloadMemoryTool
 
 from app.a2ui_utils import a2ui_callback
 from app.tools import (
+    execute_domain_culinary_tool,
     absinthe_louche_thujone_level,
     absinthe_thujone_louche_effect,
     acoustic_levitation_contactless_dehydration,
@@ -355,34 +356,26 @@ root_agent = Agent(
         model="gemini-flash-latest",
         retry_options=types.HttpRetryOptions(attempts=3),
     ),
-    instruction=instruction,
+    instruction=instruction + "\n\nPerformance Note: You have access to `execute_domain_culinary_tool(tool_name, kwargs_json)` to dynamically run any of the 270+ food science, clinical, or mixology tools.",
     tools=[
         PreloadMemoryTool(),
-        absinthe_louche_thujone_level,
-        absinthe_thujone_louche_effect,
-        acoustic_levitation_contactless_dehydration,
+        execute_domain_culinary_tool,
+        calculate_recipe_nutrition,
+        check_pantry_for_recipe,
         add_pantry_item,
-        ancient_grain_sourdough_matrix,
-        anti_inflammatory_polyphenol_diet,
-        anti_inflammatory_polyphenol_index,
-        aquacultured_seafood_sustainability,
-        astringency_tannin_salivary_protein,
-        atmospheric_cold_plasma_food_sanitization,
-        bakers_percentage_calc,
-        banquet_kitchen_operations,
-        bbq_smoker_wood_science,
-        beer_hop_alpha_acid_ibu,
-        beer_hop_alpha_acid_ibu_calc,
         calculate_aroma_volatile_pairing,
         verify_haccp_critical_control_point,
         query_culinary_knowledge_graph,
         query_usda_micronutrients,
         search_nearby_culinary_groceries,
         route_a2a_domain_request,
-        bio_fermented_ester_aroma_synthesizer,
-        bitterness_masking_sodium_cyclamate,
-        black_garlic_maillard_chamber,
-        bourbon_barrel_char_extraction,
+    ],
+    after_agent_callback=generate_memories_callback,
+    after_model_callback=a2ui_callback,
+)
+
+# Legacy individual tools kept in registry for dynamic invocation
+_unused_tools = [
         bread_crumb_retrogradation_staling,
         bread_hydration_bakers_percentage,
         cacao_roasting_curve_evaluator,
@@ -586,10 +579,7 @@ root_agent = Agent(
         wine_vintage_gdd_terroir_score,
         zero_proof_hydrosol_craft,
         zero_waste_citrus_peel_oleo_saccharum,
-    ],
-    after_agent_callback=generate_memories_callback,
-    after_model_callback=a2ui_callback,
-)
+]
 
 app = App(
     root_agent=root_agent,

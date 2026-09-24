@@ -5955,6 +5955,23 @@ def route_a2a_domain_request(domain: str, action: str, payload_summary: str = "{
         return f"Error routing A2A domain request: {e}"
 
 
+def execute_domain_culinary_tool(tool_name: str, kwargs_json: str = "{}") -> str:
+    """Dynamically executes any specialized culinary, food-science, or beverage calculation tool by name.
+    Use this to run any tool among the 270+ culinary functions (e.g. 'bakers_percentage_calc', 'nmr_water_mobility_analyzer', 'cgm_glucose_curve_predictor').
+    """
+    try:
+        import json
+        from app.registry import ToolRegistry
+        try:
+            kwargs = json.loads(kwargs_json) if kwargs_json else {}
+        except Exception:
+            kwargs = {}
+        return ToolRegistry.execute_tool(tool_name, kwargs)
+    except Exception as e:
+        return f"Error executing domain culinary tool '{tool_name}': {e}"
+
+
+
 # --- 50 NEW BRAINSTORMED DOMAIN TOOLS (IDEAS 1 - 50) ---
 
 # Category I: Advanced Food Science & Molecular Dynamics (1-10)

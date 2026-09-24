@@ -23,8 +23,11 @@ from app.tools import (
 
 
 def test_agent_total_tools():
-    """Verify that root_agent registers over 220 tools."""
-    assert len(root_agent.tools) >= 220, f"Expected >= 220 tools, got {len(root_agent.tools)}"
+    """Verify that root_agent registers optimized tool routing with full domain registry access."""
+    from app.registry import ToolRegistry
+    ToolRegistry.auto_discover()
+    assert len(root_agent.tools) >= 10, f"Expected >= 10 root tools, got {len(root_agent.tools)}"
+    assert len(ToolRegistry._registry) >= 220, f"Expected >= 220 registered domain tools, got {len(ToolRegistry._registry)}"
 
 
 def test_batch_10_future_food_science_tools():

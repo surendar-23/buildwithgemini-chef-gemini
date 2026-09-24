@@ -61,7 +61,10 @@ def test_tool_registry():
 
 
 def test_root_agent_tool_count():
-    assert len(root_agent.tools) >= 220
+    from app.registry import ToolRegistry
+    ToolRegistry.auto_discover()
+    assert len(root_agent.tools) >= 10
+    assert len(ToolRegistry._registry) >= 220
 
 
 if __name__ == "__main__":
