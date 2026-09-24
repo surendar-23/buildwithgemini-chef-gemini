@@ -40,7 +40,7 @@ def test_unit_converter_validations():
     assert UnitConverter.celsius_to_fahrenheit(100.0) == 212.0
     assert UnitConverter.mpa_to_bar(600.0) == 6000.0
 
-    with pytest.raises(ValueError, match="cannot be negative"):
+    with pytest.raises(ValueError, match="non-negative"):
         UnitConverter.validate_non_negative(-5.0, "mass_g")
 
     with pytest.raises(ValueError, match="outside valid scientific range"):
