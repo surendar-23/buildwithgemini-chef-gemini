@@ -6383,6 +6383,122 @@ def generative_gastronomy_plating_designer_eval(primary_color_hex: str, total_el
         return ToolResult(status="success", tool="generative_gastronomy_plating_designer_eval", result=FutureFoodEngine.generative_gastronomy_plating_designer(primary_color_hex, total_elements)).format_output()
     except Exception as e: return f"Error in generative_gastronomy_plating_designer_eval: {e}"
 
+# --- IDEAS 51-100: QUANTUM SYNTHESIS & SENSORS ---
+def fungal_mycelium_grain_alignment_eval(hyphal_growth_angle: float, tension_kPa: float) -> str:
+    """51. Fungal Filamentous Protein Mycelium Weaving."""
+    try:
+        from app.quantum_synth import AdvancedFermentationEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="fungal_mycelium_grain_alignment_eval", result=AdvancedFermentationEngine.fungal_mycelium_grain_alignment(hyphal_growth_angle, tension_kPa)).format_output()
+    except Exception as e: return f"Error in fungal_mycelium_grain_alignment_eval: {e}"
+
+def swir_avocado_ripeness_eval(absorbance_970nm: float, absorbance_1200nm: float) -> str:
+    """61. SWIR Hyperspectral Avocado Ripeness Scanner."""
+    try:
+        from app.quantum_synth import QuantumSensorEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="swir_avocado_ripeness_eval", result=QuantumSensorEngine.swir_avocado_ripeness(absorbance_970nm, absorbance_1200nm)).format_output()
+    except Exception as e: return f"Error in swir_avocado_ripeness_eval: {e}"
+
+def microgravity_fluid_capillary_eval(surface_tension_mN_m: float, contact_angle_deg: float) -> str:
+    """71. Microgravity Fluid Capillary Saucing System."""
+    try:
+        from app.quantum_synth import SpaceGastronomyEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="microgravity_fluid_capillary_eval", result=SpaceGastronomyEngine.microgravity_fluid_capillary(surface_tension_mN_m, contact_angle_deg)).format_output()
+    except Exception as e: return f"Error in microgravity_fluid_capillary_eval: {e}"
+
+def coffee_ground_flour_extraction_eval(spent_grounds_kg: float) -> str:
+    """81. Spent Coffee Ground Defatted Protein Flour Extractor."""
+    try:
+        from app.quantum_synth import CircularEconomyEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="coffee_ground_flour_extraction_eval", result=CircularEconomyEngine.coffee_ground_flour_extraction(spent_grounds_kg)).format_output()
+    except Exception as e: return f"Error in coffee_ground_flour_extraction_eval: {e}"
+
+def tas2r38_supertaster_bitter_masker_eval(prop_sensitivity_score: float, sodium_cyclamate_ppm: float) -> str:
+    """91. TAS2R38 Bitter Taste Receptor Genotype Flavor Masker."""
+    try:
+        from app.quantum_synth import NeuroFlavorEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="tas2r38_supertaster_bitter_masker_eval", result=NeuroFlavorEngine.tas2r38_supertaster_bitter_masker(prop_sensitivity_score, sodium_cyclamate_ppm)).format_output()
+    except Exception as e: return f"Error in tas2r38_supertaster_bitter_masker_eval: {e}"
+
+# --- IDEAS 101-200: DEEP TECH & CELLULAR AGRICULTURE ---
+def dft_binding_energy_surface_eval(pyrazine_conc_mM: float, receptor_affinity_kd_nM: float) -> str:
+    """101. Quantum Chemical Binding Energy Predictor."""
+    try:
+        from app.deep_tech import QuantumMolecularEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="dft_binding_energy_surface_eval", result=QuantumMolecularEngine.dft_binding_energy_surface(pyrazine_conc_mM, receptor_affinity_kd_nM)).format_output()
+    except Exception as e: return f"Error in dft_binding_energy_surface_eval: {e}"
+
+def vascularized_bioprinting_perfusion_eval(channel_diameter_um: float, flow_rate_uL_min: float) -> str:
+    """111. Vascularized Muscle Fiber Bioprinting Modeler."""
+    try:
+        from app.deep_tech import CellularAgriEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="vascularized_bioprinting_perfusion_eval", result=CellularAgriEngine.vascularized_bioprinting_perfusion(channel_diameter_um, flow_rate_uL_min)).format_output()
+    except Exception as e: return f"Error in vascularized_bioprinting_perfusion_eval: {e}"
+
+def vision_sear_hsv_controller_eval(hue_val: float, saturation_val: float, value_val: float) -> str:
+    """131. Closed-Loop Computer Vision Sear Level Controller."""
+    try:
+        from app.deep_tech import KitchenCyberneticsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="vision_sear_hsv_controller_eval", result=KitchenCyberneticsEngine.vision_sear_hsv_controller(hue_val, saturation_val, value_val)).format_output()
+    except Exception as e: return f"Error in vision_sear_hsv_controller_eval: {e}"
+
+def dna_methylation_reversal_menu_eval(methyl_donors_mg: float, polyphenols_mg: float) -> str:
+    """191. DNA Methylation Biological Age Reversal Menu Engine."""
+    try:
+        from app.deep_tech import BioPrintableLongevityEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="dna_methylation_reversal_menu_eval", result=BioPrintableLongevityEngine.dna_methylation_reversal_menu(methyl_donors_mg, polyphenols_mg)).format_output()
+    except Exception as e: return f"Error in dna_methylation_reversal_menu_eval: {e}"
+
+# --- IDEAS 201-500: MEGA TECH & SOVEREIGN INTELLIGENCE ---
+def galvanic_tongue_taste_synth_eval(current_uA: float, pulse_freq_hz: float) -> str:
+    """221. Galvanic Tongue Stimulation Taste Synthesizer."""
+    try:
+        from app.mega_tech import MegaTechEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="galvanic_tongue_taste_synth_eval", result=MegaTechEngine.galvanic_tongue_taste_synth(current_uA, pulse_freq_hz)).format_output()
+    except Exception as e: return f"Error in galvanic_tongue_taste_synth_eval: {e}"
+
+def pulsed_electric_field_permeabilizer_eval(voltage_kV_cm: float, pulse_duration_us: float) -> str:
+    """301. Pulsed Electric Field (PEF) Tissue Permeabilizer."""
+    try:
+        from app.mega_tech import MegaTechEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="pulsed_electric_field_permeabilizer_eval", result=MegaTechEngine.pulsed_electric_field_permeabilizer(voltage_kV_cm, pulse_duration_us)).format_output()
+    except Exception as e: return f"Error in pulsed_electric_field_permeabilizer_eval: {e}"
+
+def produces_subcritical_water_hydrolysis_eval(temp_c: float, pressure_bar: float) -> str:
+    """442. Subcritical Water Hydrolysis of Spent Grain Protein."""
+    try:
+        from app.mega_tech import MegaTechEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="produces_subcritical_water_hydrolysis_eval", result=MegaTechEngine.produces_subcritical_water_hydrolysis(temp_c, pressure_bar)).format_output()
+    except Exception as e: return f"Error in produces_subcritical_water_hydrolysis_eval: {e}"
+
+def genetic_algorithm_recipe_mutator_eval(generation_count: int, mutation_rate: float) -> str:
+    """461. Genetic Algorithm Recipe Mutation Engine."""
+    try:
+        from app.mega_tech import MegaTechEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="genetic_algorithm_recipe_mutator_eval", result=MegaTechEngine.genetic_algorithm_recipe_mutator(generation_count, mutation_rate)).format_output()
+    except Exception as e: return f"Error in genetic_algorithm_recipe_mutator_eval: {e}"
+
+def sovereign_container_biofoundry_eval(container_count: int, runtime_days: float) -> str:
+    """491. Containerized Automated Single-Cell Protein Bio-Foundry."""
+    try:
+        from app.mega_tech import MegaTechEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="sovereign_container_biofoundry_eval", result=MegaTechEngine.sovereign_container_biofoundry(container_count, runtime_days)).format_output()
+    except Exception as e: return f"Error in sovereign_container_biofoundry_eval: {e}"
+
+
 
 
 
