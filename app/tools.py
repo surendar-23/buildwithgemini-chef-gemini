@@ -5955,4 +5955,417 @@ def route_a2a_domain_request(domain: str, action: str, payload_summary: str = "{
         return f"Error routing A2A domain request: {e}"
 
 
+# --- 50 NEW BRAINSTORMED DOMAIN TOOLS (IDEAS 1 - 50) ---
+
+# Category I: Advanced Food Science & Molecular Dynamics (1-10)
+def nmr_water_mobility_analyzer(t2_relaxation_ms: float, total_water_pct: float) -> str:
+    """1. NMR Water Mobility Analyzer for free vs bound water."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="nmr_water_mobility_analyzer", result=FoodScienceEngine.nmr_water_mobility(t2_relaxation_ms, total_water_pct)).format_output()
+    except Exception as e: return f"Error in nmr_water_mobility_analyzer: {e}"
+
+def cryo_concentration_flavor_recapture(initial_brix: float, target_brix: float) -> str:
+    """2. Cryo-Concentration Flavor Recapture."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="cryo_concentration_flavor_recapture", result=FoodScienceEngine.cryo_concentration_curve(initial_brix, target_brix)).format_output()
+    except Exception as e: return f"Error in cryo_concentration_flavor_recapture: {e}"
+
+def enzymatic_bitterness_hydrolysis_simulator(limonin_ppm: float, incubation_mins: float) -> str:
+    """3. Enzymatic Bitterness Hydrolysis Simulator."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="enzymatic_bitterness_hydrolysis_simulator", result=FoodScienceEngine.enzymatic_bitterness_hydrolysis(limonin_ppm, incubation_mins)).format_output()
+    except Exception as e: return f"Error in enzymatic_bitterness_hydrolysis_simulator: {e}"
+
+def starch_amylose_gelation_matrix(amylose_pct: float, cooling_temp_c: float) -> str:
+    """4. Starch Amylose-Amylopectin Gelation Matrix."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="starch_amylose_gelation_matrix", result=FoodScienceEngine.starch_amylose_gelation(amylose_pct, cooling_temp_c)).format_output()
+    except Exception as e: return f"Error in starch_amylose_gelation_matrix: {e}"
+
+def acoustic_evaporative_dehydration_modeler(frequency_khz: float, exposure_seconds: float) -> str:
+    """5. Acoustic Evaporative Dehydration Modeler."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="acoustic_evaporative_dehydration_modeler", result=FoodScienceEngine.acoustic_evaporative_dehydration(frequency_khz, exposure_seconds)).format_output()
+    except Exception as e: return f"Error in acoustic_evaporative_dehydration_modeler: {e}"
+
+def hydrocolloid_synergistic_viscosity_calc(xanthan_pct: float, lbg_pct: float) -> str:
+    """6. Hydrocolloid Synergistic Viscosity Calculator."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="hydrocolloid_synergistic_viscosity_calc", result=FoodScienceEngine.hydrocolloid_viscosity_synergy(xanthan_pct, lbg_pct)).format_output()
+    except Exception as e: return f"Error in hydrocolloid_synergistic_viscosity_calc: {e}"
+
+def oleogel_lipid_structuring_engine(candelilla_wax_pct: float, oil_volume_ml: float) -> str:
+    """7. Oleogel Lipid Structuring Engine."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="oleogel_lipid_structuring_engine", result=FoodScienceEngine.oleogel_lipid_structuring(candelilla_wax_pct, oil_volume_ml)).format_output()
+    except Exception as e: return f"Error in oleogel_lipid_structuring_engine: {e}"
+
+def maillard_intermediate_amadori_predictor(temp_c: float, heating_time_mins: float, reducing_sugar_g: float) -> str:
+    """8. Maillard Intermediate Amadori Predictor."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="maillard_intermediate_amadori_predictor", result=FoodScienceEngine.maillard_amadori_predictor(temp_c, heating_time_mins, reducing_sugar_g)).format_output()
+    except Exception as e: return f"Error in maillard_intermediate_amadori_predictor: {e}"
+
+def high_pressure_homogenization_droplet_sizer(pressure_mpa: float, passes: int) -> str:
+    """9. High-Pressure Homogenization Droplet Sizer."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="high_pressure_homogenization_droplet_sizer", result=FoodScienceEngine.high_pressure_homogenization_droplet(pressure_mpa, passes)).format_output()
+    except Exception as e: return f"Error in high_pressure_homogenization_droplet_sizer: {e}"
+
+def protein_isoelectric_precipitation_calc(protein_type: str, current_ph: float) -> str:
+    """10. Protein Isoelectric Point Precipitation Calculator."""
+    try:
+        from app.science_ext import FoodScienceEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="protein_isoelectric_precipitation_calc", result=FoodScienceEngine.protein_isoelectric_precipitation(protein_type, current_ph)).format_output()
+    except Exception as e: return f"Error in protein_isoelectric_precipitation_calc: {e}"
+
+
+# Category II: Clinical Nutrition & Metabolic Health (11-20)
+def cgm_glucose_curve_predictor(carbs_g: float, fiber_g: float, fat_g: float) -> str:
+    """11. Continuous Glucose Monitor (CGM) Curve Predictor."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="cgm_glucose_curve_predictor", result=ClinicalEngine.cgm_glucose_curve(carbs_g, fiber_g, fat_g)).format_output()
+    except Exception as e: return f"Error in cgm_glucose_curve_predictor: {e}"
+
+def renal_dialysis_potassium_phosphorus_ratio(potassium_mg: float, phosphorus_mg: float, protein_g: float) -> str:
+    """12. Renal Dialysis Potassium/Phosphorus Ratio Optimizer."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="renal_dialysis_potassium_phosphorus_ratio", result=ClinicalEngine.renal_potassium_phosphorus_ratio(potassium_mg, phosphorus_mg, protein_g)).format_output()
+    except Exception as e: return f"Error in renal_dialysis_potassium_phosphorus_ratio: {e}"
+
+def fodmap_polyol_hydrolysis_estimator(fructose_g: float, glucose_g: float, sorbitol_g: float) -> str:
+    """13. FODMAP Polyol Hydrolysis Estimator."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="fodmap_polyol_hydrolysis_estimator", result=ClinicalEngine.fodmap_polyol_hydrolysis(fructose_g, glucose_g, sorbitol_g)).format_output()
+    except Exception as e: return f"Error in fodmap_polyol_hydrolysis_estimator: {e}"
+
+def histamine_accumulation_dynamics_engine(storage_days: float, temp_c: float) -> str:
+    """14. Histamine Accumulation Dynamics Engine."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="histamine_accumulation_dynamics_engine", result=ClinicalEngine.histamine_accumulation_dynamics(storage_days, temp_c)).format_output()
+    except Exception as e: return f"Error in histamine_accumulation_dynamics_engine: {e}"
+
+def iddsi_dysphagia_viscosity_rheometer(yield_stress_pa: float) -> str:
+    """15. IDDSI Dysphagia Viscosity Rheometer."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="iddsi_dysphagia_viscosity_rheometer", result=ClinicalEngine.iddsi_dysphagia_viscosity(yield_stress_pa)).format_output()
+    except Exception as e: return f"Error in iddsi_dysphagia_viscosity_rheometer: {e}"
+
+def leucine_trigger_threshold_calc(leucine_g: float, total_protein_g: float) -> str:
+    """16. Mitochondrial Leucine Trigger Threshold Calc."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="leucine_trigger_threshold_calc", result=ClinicalEngine.leucine_trigger_threshold(leucine_g, total_protein_g)).format_output()
+    except Exception as e: return f"Error in leucine_trigger_threshold_calc: {e}"
+
+def scfa_gut_microbiome_yield_simulator(resistant_starch_g: float, inulin_g: float) -> str:
+    """17. Gut Microbiome Short-Chain Fatty Acid (SCFA) Simulator."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="scfa_gut_microbiome_yield_simulator", result=ClinicalEngine.scfa_gut_microbiome_yield(resistant_starch_g, inulin_g)).format_output()
+    except Exception as e: return f"Error in scfa_gut_microbiome_yield_simulator: {e}"
+
+def oxalate_binding_calcium_model(oxalate_mg: float, calcium_mg: float) -> str:
+    """18. Oxalate Binding & Calcium Precipitation Model."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="oxalate_binding_calcium_model", result=ClinicalEngine.oxalate_binding_calcium(oxalate_mg, calcium_mg)).format_output()
+    except Exception as e: return f"Error in oxalate_binding_calcium_model: {e}"
+
+def orac_antioxidant_index_evaluator(polyphenols_mg: float, anthocyanins_mg: float) -> str:
+    """19. Endogenous Antioxidant ORAC Index Evaluator."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="orac_antioxidant_index_evaluator", result=ClinicalEngine.orac_antioxidant_index(polyphenols_mg, anthocyanins_mg)).format_output()
+    except Exception as e: return f"Error in orac_antioxidant_index_evaluator: {e}"
+
+def post_bariatric_protein_density_optimizer(serving_ml: float, protein_g: float) -> str:
+    """20. Post-Bariatric Protein Density Optimizer."""
+    try:
+        from app.clinical_ext import ClinicalEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="post_bariatric_protein_density_optimizer", result=ClinicalEngine.post_bariatric_protein_density(serving_ml, protein_g)).format_output()
+    except Exception as e: return f"Error in post_bariatric_protein_density_optimizer: {e}"
+
+
+# Category III: Restaurant Tech, HACCP & Commercial Operations (21-30)
+def haccp_alarm_workflow_engine(chiller_temp_c: float, elapsed_hours: float) -> str:
+    """21. Automated HACCP Deviation Corrective Action Engine."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="haccp_alarm_workflow_engine", result=OpsEngine.haccp_alarm_workflow(chiller_temp_c, elapsed_hours)).format_output()
+    except Exception as e: return f"Error in haccp_alarm_workflow_engine: {e}"
+
+def sous_vide_thermal_death_time_calc(thickness_mm: float, water_temp_c: float) -> str:
+    """22. Sous Vide Thermal Death Time (D-value/z-value) Log Reducer."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="sous_vide_thermal_death_time_calc", result=OpsEngine.sous_vide_thermal_death_time(thickness_mm, water_temp_c)).format_output()
+    except Exception as e: return f"Error in sous_vide_thermal_death_time_calc: {e}"
+
+def commercial_kitchen_yield_costing_eval(raw_weight_kg: float, cooked_weight_kg: float, raw_cost_usd: float) -> str:
+    """23. Commercial Kitchen Prep Yield & Waste Costing."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="commercial_kitchen_yield_costing_eval", result=OpsEngine.commercial_kitchen_yield_costing(raw_weight_kg, cooked_weight_kg, raw_cost_usd)).format_output()
+    except Exception as e: return f"Error in commercial_kitchen_yield_costing_eval: {e}"
+
+def multi_unit_inventory_par_level_predictor(daily_usage_avg: float, lead_time_days: float, safety_stock_days: float) -> str:
+    """24. Multi-Unit Menu Inventory Par Level Predictor."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="multi_unit_inventory_par_level_predictor", result=OpsEngine.multi_unit_inventory_par_level(daily_usage_avg, lead_time_days, safety_stock_days)).format_output()
+    except Exception as e: return f"Error in multi_unit_inventory_par_level_predictor: {e}"
+
+def allergen_cross_contact_matrix_checker(shared_equipment: list, allergen_present: str) -> str:
+    """25. Allergen Cross-Contact Equipment Isolation Matrix."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="allergen_cross_contact_matrix_checker", result=OpsEngine.allergen_cross_contact_matrix(shared_equipment, allergen_present)).format_output()
+    except Exception as e: return f"Error in allergen_cross_contact_matrix_checker: {e}"
+
+def banquet_thermal_holding_quality_eval(holding_temp_c: float, holding_hours: float) -> str:
+    """26. Banquet Thermal Holding Quality Loss Estimator."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="banquet_thermal_holding_quality_eval", result=OpsEngine.banquet_thermal_holding_quality(holding_temp_c, holding_hours)).format_output()
+    except Exception as e: return f"Error in banquet_thermal_holding_quality_eval: {e}"
+
+def kitchen_energy_carbon_footprint_calc(kwh_consumed: float, covers_served: float) -> str:
+    """27. Kitchen Energy Consumption & Carbon Footprint Simulator."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="kitchen_energy_carbon_footprint_calc", result=OpsEngine.kitchen_energy_carbon_footprint(kwh_consumed, covers_served)).format_output()
+    except Exception as e: return f"Error in kitchen_energy_carbon_footprint_calc: {e}"
+
+def recipe_batch_scaler_equipment_limits(base_servings: int, target_servings: int, kettle_max_liters: float) -> str:
+    """28. Dynamic Recipe Scaler with Equipment Capacity Limits."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="recipe_batch_scaler_equipment_limits", result=OpsEngine.recipe_batch_scaler(base_servings, target_servings, kettle_max_liters)).format_output()
+    except Exception as e: return f"Error in recipe_batch_scaler_equipment_limits: {e}"
+
+def ikejime_fish_quality_index_eval(harvest_method: str, storage_hours: float) -> str:
+    """29. Ikejime Fish Harvest Quality Retention Index."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="ikejime_fish_quality_index_eval", result=OpsEngine.ikejime_fish_quality_index(harvest_method, storage_hours)).format_output()
+    except Exception as e: return f"Error in ikejime_fish_quality_index_eval: {e}"
+
+def cold_chain_tti_integrator_eval(excursion_mins: float, peak_temp_c: float) -> str:
+    """30. Cold Chain Excursion Time-Temperature Integrator (TTI)."""
+    try:
+        from app.ops_ext import OpsEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="cold_chain_tti_integrator_eval", result=OpsEngine.cold_chain_tti_integrator(excursion_mins, peak_temp_c)).format_output()
+    except Exception as e: return f"Error in cold_chain_tti_integrator_eval: {e}"
+
+
+# Category IV: Beverage, Spirits & Mixology Engineering (31-40)
+def rotovap_boiling_point_calc(target_temp_c: float, ethanol_pct: float) -> str:
+    """31. Rotovap Vacuum Distillation Boiling Point Calculator."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="rotovap_boiling_point_calc", result=BeverageEngine.rotovap_boiling_point(target_temp_c, ethanol_pct)).format_output()
+    except Exception as e: return f"Error in rotovap_boiling_point_calc: {e}"
+
+def cocktail_thermal_dilution_calc(shaking_seconds: float, ice_temp_c: float) -> str:
+    """32. Cocktail Thermal Dilution & Melting Ice Thermodynamics."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="cocktail_thermal_dilution_calc", result=BeverageEngine.cocktail_thermal_dilution(shaking_seconds, ice_temp_c)).format_output()
+    except Exception as e: return f"Error in cocktail_thermal_dilution_calc: {e}"
+
+def champagne_tirage_dosage_calc(target_bar: float) -> str:
+    """33. Champagne Tirage Sugar & Pressure Calculator."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="champagne_tirage_dosage_calc", result=BeverageEngine.champagne_tirage_dosage(target_bar)).format_output()
+    except Exception as e: return f"Error in champagne_tirage_dosage_calc: {e}"
+
+def shelf_stable_acid_blend_modeler(target_citric_equiv_g: float) -> str:
+    """34. Shelf-Stable Acid Matrix Modeler."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="shelf_stable_acid_blend_modeler", result=BeverageEngine.shelf_stable_acid_blend(target_citric_equiv_g)).format_output()
+    except Exception as e: return f"Error in shelf_stable_acid_blend_modeler: {e}"
+
+def bourbon_barrel_char_extraction_eval(aging_months: float, char_level: int) -> str:
+    """35. Bourbon Barrel Char Extraction Kinetics."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="bourbon_barrel_char_extraction_eval", result=BeverageEngine.bourbon_barrel_char_extraction(aging_months, char_level)).format_output()
+    except Exception as e: return f"Error in bourbon_barrel_char_extraction_eval: {e}"
+
+def hops_ibu_tinseth_calc(alpha_acid_pct: float, boil_mins: float, gravity: float) -> str:
+    """36. Hops Alpha-Acid Isomerization (IBU) Predictor."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="hops_ibu_tinseth_calc", result=BeverageEngine.hops_ibu_tinseth(alpha_acid_pct, boil_mins, gravity)).format_output()
+    except Exception as e: return f"Error in hops_ibu_tinseth_calc: {e}"
+
+def absinthe_louche_thujone_model(thujone_ppm: float, dilution_ratio: float) -> str:
+    """37. Absinthe Louche Thujone Hydrophobic Precipitation Model."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="absinthe_louche_thujone_model", result=BeverageEngine.absinthe_louche_thujone(thujone_ppm, dilution_ratio)).format_output()
+    except Exception as e: return f"Error in absinthe_louche_thujone_model: {e}"
+
+def zero_proof_mouthfeel_replicator_calc(target_viscosity_cps: float) -> str:
+    """38. Zero-Proof Hydrocolloid Mouthfeel Replicator."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="zero_proof_mouthfeel_replicator_calc", result=BeverageEngine.zero_proof_mouthfeel_replicator(target_viscosity_cps)).format_output()
+    except Exception as e: return f"Error in zero_proof_mouthfeel_replicator_calc: {e}"
+
+def koji_gin_botanical_steep_calc(steep_hours: float, ethanol_pct: float) -> str:
+    """39. Koji Gin Botanical Steep Duration Optimizer."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="koji_gin_botanical_steep_calc", result=BeverageEngine.koji_gin_botanical_steep(steep_hours, ethanol_pct)).format_output()
+    except Exception as e: return f"Error in koji_gin_botanical_steep_calc: {e}"
+
+def wine_tannin_salivary_astringency_eval(tannin_mg_l: float, fat_content_pct: float) -> str:
+    """40. Wine Tannin-Salivary Protein Astringency Index."""
+    try:
+        from app.beverage_ext import BeverageEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="wine_tannin_salivary_astringency_eval", result=BeverageEngine.wine_tannin_salivary_astringency(tannin_mg_l, fat_content_pct)).format_output()
+    except Exception as e: return f"Error in wine_tannin_salivary_astringency_eval: {e}"
+
+
+# Category V: Future Foods, Upcycling & AI Kitchen Robotics (41-50)
+def food_3d_printing_rheology_modeler(yield_stress_pa: float, nozzle_diam_mm: float) -> str:
+    """41. 3D Food Printing Extrusion Rheology Modeler."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="food_3d_printing_rheology_modeler", result=FutureFoodEngine.food_3d_printing_rheology(yield_stress_pa, nozzle_diam_mm)).format_output()
+    except Exception as e: return f"Error in food_3d_printing_rheology_modeler: {e}"
+
+def oleo_saccharum_upcycling_engine(citrus_peel_g: float, sugar_g: float) -> str:
+    """42. Upcycled Fruit Peel Oleo-Saccharum Extraction Engine."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="oleo_saccharum_upcycling_engine", result=FutureFoodEngine.oleo_saccharum_upcycling(citrus_peel_g, sugar_g)).format_output()
+    except Exception as e: return f"Error in oleo_saccharum_upcycling_engine: {e}"
+
+def cell_cultivated_meat_media_optimizer(glucose_g_l: float, amino_acids_g_l: float) -> str:
+    """43. Cell-Cultivated Meat Media Cost & Scaffold Optimizer."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="cell_cultivated_meat_media_optimizer", result=FutureFoodEngine.cell_cultivated_meat_media(glucose_g_l, amino_acids_g_l)).format_output()
+    except Exception as e: return f"Error in cell_cultivated_meat_media_optimizer: {e}"
+
+def mycelium_solid_state_fermenter_eval(substrate_weight_kg: float, incubation_days: float) -> str:
+    """44. Mycelium Solid-State Biomass Fermenter."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="mycelium_solid_state_fermenter_eval", result=FutureFoodEngine.mycelium_solid_state_fermenter(substrate_weight_kg, incubation_days)).format_output()
+    except Exception as e: return f"Error in mycelium_solid_state_fermenter_eval: {e}"
+
+def insect_protein_extrusion_blending_eval(cricket_flour_pct: float) -> str:
+    """45. Insect Protein (Cricket/Tenebrio) Texture Blending Engine."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="insect_protein_extrusion_blending_eval", result=FutureFoodEngine.insect_protein_extrusion_blending(cricket_flour_pct)).format_output()
+    except Exception as e: return f"Error in insect_protein_extrusion_blending_eval: {e}"
+
+def precision_fermentation_casein_eval(calcium_mmol: float, ph: float) -> str:
+    """46. Precision Fermentation Casein Micelle Assembly."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="precision_fermentation_casein_eval", result=FutureFoodEngine.precision_fermentation_casein(calcium_mmol, ph)).format_output()
+    except Exception as e: return f"Error in precision_fermentation_casein_eval: {e}"
+
+def algae_bitterness_masking_eval(spirulina_g: float, thaumatin_ppm: float) -> str:
+    """47. Algae Spirulina/Chlorella Bitter Masking Matrix."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="algae_bitterness_masking_eval", result=FutureFoodEngine.algae_bitterness_masking(spirulina_g, thaumatin_ppm)).format_output()
+    except Exception as e: return f"Error in algae_bitterness_masking_eval: {e}"
+
+def universal_robotic_cooking_primitives_actuator(action: str, target_temp_c: float) -> str:
+    """48. Universal Robotic Cooking Actuation Primitives."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="universal_robotic_cooking_primitives_actuator", result=FutureFoodEngine.universal_robotic_cooking_primitives(action, target_temp_c)).format_output()
+    except Exception as e: return f"Error in universal_robotic_cooking_primitives_actuator: {e}"
+
+def smart_kitchen_telemetry_sync_eval(probe_temp_c: float, ambient_humidity_pct: float) -> str:
+    """49. Closed-Loop Smart Kitchen Sensor Telemetry Sync."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="smart_kitchen_telemetry_sync_eval", result=FutureFoodEngine.smart_kitchen_telemetry_sync(probe_temp_c, ambient_humidity_pct)).format_output()
+    except Exception as e: return f"Error in smart_kitchen_telemetry_sync_eval: {e}"
+
+def generative_gastronomy_plating_designer_eval(primary_color_hex: str, total_elements: int) -> str:
+    """50. Generative Gastronomy Dish Aesthetic Visualizer."""
+    try:
+        from app.future_ext import FutureFoodEngine
+        from app.schemas import ToolResult
+        return ToolResult(status="success", tool="generative_gastronomy_plating_designer_eval", result=FutureFoodEngine.generative_gastronomy_plating_designer(primary_color_hex, total_elements)).format_output()
+    except Exception as e: return f"Error in generative_gastronomy_plating_designer_eval: {e}"
+
+
+
 
