@@ -204,6 +204,12 @@ async def chat(req: Request):
     return JSONResponse({"parts": parts})
 
 
+@app.get("/healthz")
+@app.get("/health")
+async def health_check():
+    return JSONResponse({"status": "healthy", "service": "chef-gemini-frontend", "autonomous": True})
+
+
 STATIC_DIR = Path(__file__).parent / "static"
 # Serve the chat UI (keep this mount last so /chat wins).
 app.mount("/", StaticFiles(directory=str(STATIC_DIR), html=True), name="static")
